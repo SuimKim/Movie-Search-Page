@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 50px;
+    background-color: #f5f5f5;
+}
+header{
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+.titleline{
+    width: 80%;
+    height: 1px;
+    background-color: #8b8b8b;
+    top: 68px;
+    position: relative;
+    border: none;
+}
+.maintitle{
+    width: 100%;
+    position: relative;
+}
+.maintitle h1{
+    font-size: 30pt;
+    background-color: #f5f5f5;
+    display: inline-block;
+    padding: 0 20px 0 20px;
+}
+#search{
+    width: 500px;
+    height: 40px;
+    border-radius: 0;
+    border: 1px solid black;
+}
+#search:focus{
+    outline: none;
+}
+
+main{
+    background-color: white;
+    width: 85%;
+    margin: 40px auto 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+}
+.cardslist{
+    padding-left: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 15rem);
+    justify-content: space-evenly;
+    row-gap: 1.5vw;
+}
+.moviecard{
+    width: 200px;
+    height: 380px;
+}
+.imgbox, .pbox{
+    margin: 10px;
+}
+
+
+.imgbox img{
+    height: 270px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mtitle{
+    font-weight: bold;
+    font-size: 0.9em;
+}
+.mcon{
+    font-size: 0.7em;
+    color: rgb(110, 110, 110);
+}
+.side{
+    color:lightgray;
+    font-size: 1.2em;
+}
