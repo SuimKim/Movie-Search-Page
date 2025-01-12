@@ -4,77 +4,144 @@ body {
     padding-bottom: 50px;
     background-color: #f5f5f5;
 }
+/*---------------------------------*/
+/*---------------헤더---------------*/
+/*---------------------------------*/
 header{
     width: 100%;
+    height: 30vw;
     text-align: center;
     position: relative;
+    background-image: url(IMG_8683.jpg) ;
+    background-size: cover;
 }
-.titleline{
-    width: 80%;
-    height: 1px;
-    background-color: #8b8b8b;
-    top: 68px;
-    position: relative;
-    border: none;
-}
-.maintitle{
-    width: 100%;
-    position: relative;
-}
-.maintitle h1{
-    font-size: 30pt;
-    background-color: #f5f5f5;
-    display: inline-block;
-    padding: 0 20px 0 20px;
-}
-#search{
-    width: 500px;
+
+#search-bar{
+    width: 300px;
     height: 40px;
     border-radius: 0;
     border: 1px solid black;
 }
-#search:focus{
+#search-bar:focus{
     outline: none;
 }
-
+/*---------------------------------*/
+/*---------------메인---------------*/
+/*---------------------------------*/
 main{
     background-color: white;
     width: 85%;
     margin: 40px auto 0 auto;
-    padding: 30px;
+    padding: 50px;
     border-radius: 10px;
 }
-.cardslist{
-    padding-left: 40px;
+/*---------------리스트---------------*/
+.cards-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, 15rem);
+    grid-template-columns: repeat(auto-fit, 15%);
     justify-content: space-evenly;
-    row-gap: 1.5vw;
+    column-gap: 2vw;
+    row-gap: 4vw;
 }
-.moviecard{
-    width: 200px;
-    height: 380px;
+.movie-card{
+    /*width: 200px;
+    height: 380px;*/
+    position: relative;
 }
-.imgbox, .pbox{
-    margin: 10px;
+.movie-card:hover{
+    cursor: pointer;
+}
+.list-img-box{
+    height: 18vw;
+    overflow: hidden;
 }
 
-
-.imgbox img{
-    height: 270px;
+.list-img-box img{
+    /*height: 270px;*/
     width: 100%;
-    box-sizing: border-box;
 }
-
-.mtitle{
+.list-title{
     font-weight: bold;
-    font-size: 0.9em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
-.mcon{
+.list-contents{
     font-size: 0.7em;
     color: rgb(110, 110, 110);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .side{
     color:lightgray;
     font-size: 1.2em;
+    margin: 0 0.4em 0 0.4em;
+}
+.id-box{
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+/*---------------모달---------------*/
+.modal{
+    display: none;
+    position: fixed;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.1);
+}
+.modal-body{
+    position: relative;
+    top: 100px;
+    width: 800px;
+    height: 70%;
+    background-color: white;
+    border-radius: 10px;
+    max-height: calc(100vh - 200px);
+    padding: 20px 20px 0 20px;
+    overflow: hidden;
+}
+.modal-main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 50%);
+    justify-content: space-evenly;
+}
+.modal-img-box, .modal-contents-box{
+    margin: 10px;
+}
+
+.modal-img-box img{
+    box-sizing: border-box;
+    width: 100%;
+}
+.modal-footer-box{
+    background-color: white;
+    position: sticky;
+    bottom: 0;
+    height: 70px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+#btn-close-modal, .btn-add-bookmark{
+    height: 50px;
+    width: 49%;
+    border-radius: 0;
+    border: none;
+}
+#btn-close-modal{
+    background-color: #dadada;
+}
+.btn-add-bookmark{
+    background-color: #c0deef;
+}
+#btn-close-modal:hover, .btn-add-bookmark:hover{
+    cursor: pointer;
+    background-color: #c3c3c3;
 }
