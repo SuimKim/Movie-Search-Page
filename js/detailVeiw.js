@@ -31,16 +31,96 @@ async function displayDetails(data) {
 }
 // -------------------------------------------------------------------------
 // 카드 클릭하면 모달 오픈
-cardsList.addEventListener("click", function (e) {
-    modalContents.innerHTML = "";
-    const detailUrl = `https://api.themoviedb.org/3/movie/${e.target.id}?language=ko-KR`;
+// cardsList.addEventListener("click", function (e) {
+//     modalContents.innerHTML = "";
+//     const detailUrl = `https://api.themoviedb.org/3/movie/${e.target.id}?language=ko-KR`;
     
-    (e.target.className === "id-box") && (modal.style.display = "flex"), fetchId(detailUrl);
-})
+//    if (e.target.className === "id-box") modal.style.display = "flex", fetchId(detailUrl);
+// })
 // -------------------------------------------------------------------------
 // 모달 닫기 버튼으로 모달 닫기
-async function closeModal() {
-    const close = document.getElementById("btn-close-modal");
+// async function closeModal() {
+//     const close = document.getElementById("btn-close-modal");
 
-    close.addEventListener("click", () => modal.style.display = "none");
-}
+//     close.addEventListener("click", () => modal.style.display = "none");
+// }
+
+
+
+
+main.addEventListener("click", async function (e) {
+
+    console.log(e.target.className);
+
+    if (e.target.className === "id-box"){
+        modalContents.innerHTML = "";
+        const detailUrl = `https://api.themoviedb.org/3/movie/${e.target.id}?language=ko-KR`;
+    
+        modal.style.display = "flex";
+
+        fetchId(detailUrl);
+    }
+
+    if (e.target.id === "btn-close-modal") {
+        modal.style.display = "none";
+    }
+
+    if (e.target.className === "btn-add-bookmark"){
+        const bookMarkAdd = document.querySelector(".btn-add-bookmark");
+        const bookMarkRemove = document.querySelector(".btn-remove-bookmark");
+
+        if (localStorageId === null) {
+            localStorage.setItem("id", JSON.stringify([e.target.id]));
+            bookMarkArr = JSON.parse(localStorage.id);
+
+            alert("북마크 추가 완료!");
+
+        } else if(bookMarkArr.some((a) => {return a == e.target.id;}) === false){
+            bookMarkArr = JSON.parse(localStorage.id);
+            bookMarkArr.push(e.target.id);
+            localStorage.setItem("id", JSON.stringify(bookMarkArr));
+
+            alert("북마크 추가 완료!");
+
+        } else {
+            alert("이미 저장된 영화입니다.");
+            return;
+        }
+
+        
+        bookMarkAdd.style.display = "none";
+        bookMarkRemove.style.display = "block";
+    }
+
+    if (e.target.className === "btn-remove-bookmark"){
+        const bookMarkAdd = document.querySelector(".btn-add-bookmark");
+        const bookMarkRemove = document.querySelector(".btn-remove-bookmark");
+
+        let deleteArr = bookMarkArr.filter((id) => id != e.target.id);
+
+        bookMarkArr = deleteArr;
+        localStorage.setItem("id", JSON.stringify(bookMarkArr));
+
+        alert("북마크 삭제 완료!");
+
+        bookMarkRemove.style.display = "none";
+        bookMarkAdd.style.display = "block";
+
+    }
+
+    if (e.target.id === "btn-bookmark"){
+        if(localStorageId === null || bookMarkArr.length === 0){  // 로컬스토리지 값 유효성 검사
+            alert("북마크함이 비어있습니다.");
+            // location.reload();
+            return;
+        }
+        cardsList.style.display = "none";
+        cardsList.innerHTML = "";
+    
+        for(let i = 0; i < bookMarkArr.length; i++){     // 로컬 스토리지에 저장된 id 불러와서 리스트 뿌리기
+            const url = `https://api.themoviedb.org/3/movie/${bookMarkArr[i]}?language=ko-KR`;
+            await fetchBookMark(url)
+        }
+    }
+
+})
