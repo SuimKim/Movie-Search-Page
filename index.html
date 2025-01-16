@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>LMLM</title>
+    <title>LMLM테스트페이지</title>
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="/img/logo_.png" alt="" class="main-logo"></a>
+        <a href="index.html"><img src="/assets/img/logo_.png" alt="" class="main-logo"></a>
         <div class="search-box">
             <p>Love Movies, Let's Movie Search!</p>
-            <input type="text" placeholder="어떤 영화가 궁금해? 💚" id="input-search">
-            <img src="/img/search.png" alt="" id="btn-search">
+            <input type="text" placeholder="어떤 영화가 궁금해?" id="input-search">
+            <img src="/assets/img/search.png" alt="" id="btn-search">
         </div>
     </header>
-    <main>
+    <main id="main-contents">
         <section class="list">
             <div class="menu">
-                <a href="index.html"><img src="/img/home.png" alt="" id="btn-home"></a><br>
+                <a href="index.html"><img src="/assets/img/home.png" alt="" id="btn-home"></a><br>
                 <hr>
-                <img src="/img/like_.png" alt="" id="btn-bookmark">
+                <img src="/assets/img/like_.png" alt="" id="btn-bookmark">
             </div>
             <div class="card-list"> 
                 <p class="loading">💚 로딩중이야 💚<br>(｡◠‿◠｡)</p>
@@ -36,12 +36,7 @@
         </section>
     </main>
 
-    <script src="/js/apiKey.js"></script>       
-    <script src="/js/name.js"></script>         
-    <script src="/js/fetch.js"></script>         
-    <script src="/js/mainDisplay.js"></script>   
-    <script src="/js/cardsList.js"></script>  
-    <script src="/js/detailVeiw.js"></script>    
-    <script src="/js/bookMark.js"></script>      
+    <script src="/js/components/globalConstant.js"></script>
+    <script type="module" src="/js/event/event.js"></script>
 </body>
 </html>
