@@ -48,8 +48,13 @@ css 구현 시 반응형 화면으로 구현해봤습니다.
 - 북마크함을 들어가서 추가한 모든 데이터 조회가 가능합니다.
 - 북마크함에서 데이터 삭제 시, 해당 화면에 바로 최신 데이터가 출력되지 않는 문제를 수정 예정입니다.
 ## 🍀 프로젝트  관련 기록 및 회고
-#### 250109
-[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=_kimsuim&slug=TIL250109-CSS랑-싸우다가-하루가-다-갔어)](https://velog.io/@_kimsuim/TIL250109-CSS%EB%9E%91-%EC%8B%B8%EC%9A%B0%EB%8B%A4%EA%B0%80-%ED%95%98%EB%A3%A8%EA%B0%80-%EB%8B%A4-%EA%B0%94%EC%96%B4s)
+#### 1. TIL
+[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=_kimsuim&slug=TIL250109-CSS랑-싸우다가-하루가-다-갔어)](https://velog.io/@_kimsuim/TIL250109-CSS%EB%9E%91-%EC%8B%B8%EC%9A%B0%EB%8B%A4%EA%B0%80-%ED%95%98%EB%A3%A8%EA%B0%80-%EB%8B%A4-%EA%B0%94%EC%96%B4)
+
+[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=_kimsuim&slug=TIL250110-5시간-잡고-있던-건-그저-잡고만-있었어)](https://velog.io/@_kimsuim/TIL250110-5%EC%8B%9C%EA%B0%84-%EC%9E%A1%EA%B3%A0-%EC%9E%88%EB%8D%98-%EA%B1%B4-%EA%B7%B8%EC%A0%80-%EC%9E%A1%EA%B3%A0%EB%A7%8C-%EC%9E%88%EC%97%88%EC%96%B4)
+
+[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=_kimsuim&slug=TIL250113-상세페이지-받아오기-50시간-썼는데-코드-5줄임)](https://velog.io/@_kimsuim/TIL250113-상세페이지-받아오기-50시간-썼는데-코드-5줄임)
+
 
 
 ## 🫢 배운 점 & 아쉬운 점
