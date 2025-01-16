@@ -49,8 +49,7 @@ css 구현 시 반응형 화면으로 구현해봤습니다.
 - 북마크함에서 데이터 삭제 시, 해당 화면에 바로 최신 데이터가 출력되지 않는 문제를 수정 예정입니다.
 ## 🍀 프로젝트  관련 기록 및 회고
 #### 250109
-[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=_kimsuim)]([https://velog.io/@_kimsuim/TIL250109-CSS랑-싸우다가-하루가-다-갔어])
-
+[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=_kimsuim&slug=TIL250109-CSS랑-싸우다가-하루가-다-갔어)](https://velog.io/@_kimsuim/TIL250109-CSS%EB%9E%91-%EC%8B%B8%EC%9A%B0%EB%8B%A4%EA%B0%80-%ED%95%98%EB%A3%A8%EA%B0%80-%EB%8B%A4-%EA%B0%94%EC%96%B4s)
 
 
 ## 🫢 배운 점 & 아쉬운 점
