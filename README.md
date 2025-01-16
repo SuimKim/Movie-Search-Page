@@ -1,18 +1,11 @@
 # Vanilla JS 영화 검색 사이트
-🔗 [바로가기 Click !!]()
-
-<br>
 
 ## 📷 Preview
-<p align="center">
-  <img src="/readme_img/main.png" width="100%" border="1px">
-  <img src="/readme_img/search.png" width="49.3%" border="1px"> <img src="/readme_img/bookmark.png" width="49.3%" border="1px">
-  <img src="/readme_img/modal.png" width="49.3%" border="1px"> <img src="/readme_img/like.png" width="49.3%" border="1px">
-  
-  
-</p>
+<img src="/readme_img/main.png">
 
-<br>
+🔗 [바로가기 Click !!](https://jocular-longma-fc623f.netlify.app/)
+
+<br><br>
 
 ## 🍀 프로젝트 소개
 TMDB API로 영화 검색 사이트를 제작했습니다.
@@ -25,41 +18,66 @@ css 구현 시 반응형 화면으로 구현해봤습니다.
 - **25.01.16 - 17** 코드 모듈화 및 디버깅
 
 #### 2. 개발환경 및 사용 언어
-- **언어**: HTML / CSS / JAVASCRIPT
-- **디자인**: PIGMA
-- **개발 툴**: VS CODE
+- **언어** || html / css / JavaScript
+- **디자인** || pigma
+- **개발 툴** || vs code
 
 #### 3. 디렉토리 구조
-  + **/img**: 웹 페이지 사용된 아이콘과 배경, 대체 이미지 파일이 들어있습니다.
-  + **/font**: 웹 페이지에 사용된 폰트 파일이 들어있습니다.
-  + **/js**: 웹 페이지에 사용된 js 파일이 들어있습니다.
-    - 아ㅣ아아아
+  + **/assets** 
+    ㄴ font: 웹 페이지에 사용한 폰트 파일이 들어있습니다. 저작권 문제로 커밋하지 않았습니다!
+    ㄴ img: 웹 페이지에 사용한 아이콘, 이미지 등이 들어있습니다.
+  + **/js**
+    ㄴ api: api를 요청하는 fetch 코드가 들어있습니다.
+    ㄴ components: 화면 조작과 관련된 코드가 들어있습니다. (+전역상수와 변수)
+    ㄴ event: 이벤트를 생성하는 코드가 들어있습니다.
+    ㄴ ui: 화면을 구성하는 코드가 들어있습니다.
+  + **/key** 
+    ㄴ api 키가 담겨있습니다. 고유키라 커밋하지 않았습니다!
 
 ## 🍀 프로젝트 주요기능
 #### 1. 검색
+<img src="/readme_img/search.png">
+
 - 검색 버튼을 누르거나 검색어 입력 후 엔터를 누르면 API에서 검색 결과를 받아와서 보여줍니다.
-- 실시간 겁색 기능 -> 계속 이벤트리스너가 호출되어 결과가 여러번 출력되는 오류가 있어 디바운싱 / 쓰로틀링 기능 사용 예정입니다.
+- 실시간으로 검색 결과를 띄워주고 값을 지우면 다시 메인 데이터를 보여줍니다.
+
 #### 2. 상세 정보 조회
+<img src="/readme_img/modal.png">
+
 - 영화 데이터를 클릭하면 해당 영화의 상세 정보를 띄웁니다.
 - 클릭한 영화의 id를 받아온 후 API에게 요청해서 모달창으로 보여줍니다.
+
 #### 3. 북마크
+<img src="/readme_img/like.png">
+
 - 상세 정보를 보는 창에서 북마크 추가 버튼을 누르면 추가되고 삭제 버튼으로 바뀝니다.
 - 다시 삭제 버튼을 누르면 데이터가 삭제되며 버튼은 다시 추가 버튼으로 바뀝니다.
+<img src="/readme_img/bookmark.png">
+
 - 북마크함을 들어가서 추가한 모든 데이터 조회가 가능합니다.
 - 북마크함에서 데이터 삭제 시, 해당 화면에 바로 최신 데이터가 출력되지 않는 문제를 수정 예정입니다.
 ## 🍀 프로젝트  관련 기록 및 회고
-#### 1. TIL
-[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=_kimsuim&slug=TIL250109-CSS랑-싸우다가-하루가-다-갔어)](https://velog.io/@_kimsuim/TIL250109-CSS%EB%9E%91-%EC%8B%B8%EC%9A%B0%EB%8B%A4%EA%B0%80-%ED%95%98%EB%A3%A8%EA%B0%80-%EB%8B%A4-%EA%B0%94%EC%96%B4)
+[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=_kimsuim)](https://velog.io/@_kimsuim)
 
-[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=_kimsuim&slug=TIL250110-5시간-잡고-있던-건-그저-잡고만-있었어)](https://velog.io/@_kimsuim/TIL250110-5%EC%8B%9C%EA%B0%84-%EC%9E%A1%EA%B3%A0-%EC%9E%88%EB%8D%98-%EA%B1%B4-%EA%B7%B8%EC%A0%80-%EC%9E%A1%EA%B3%A0%EB%A7%8C-%EC%9E%88%EC%97%88%EC%96%B4)
+#### 1.TIL
+🔗 [250109](https://velog.io/@_kimsuim/TIL250109-CSS랑-싸우다가-하루가-다-갔어) 🔗 [250110](https://velog.io/@_kimsuim/TIL250110-5시간-잡고-있던-건-그저-잡고만-있었어) 🔗 [250113](https://velog.io/@_kimsuim/TIL250113-상세페이지-받아오기-50시간-썼는데-코드-5줄임)
 
-[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=_kimsuim&slug=TIL250113-상세페이지-받아오기-50시간-썼는데-코드-5줄임)](https://velog.io/@_kimsuim/TIL250113-상세페이지-받아오기-50시간-썼는데-코드-5줄임)
+#### 2. 트러블 슈팅
+- 🔗 [250111 검색 기능 리팩토링](https://velog.io/@_kimsuim/TIL250111-트러블-슈팅-하나씩-찍어보자)
+- 🔗 [250112 로컬스토리지 사용하기](https://velog.io/@_kimsuim/TIL250112-트러블-슈팅-배열-안에-배열이-들어가잔하요)
+- 🔗 [250115 북마크 기능 완성하기](https://velog.io/@_kimsuim/TIL250115-트러블-슈팅-북마크-기능-완성하기)
 
+#### 3. 회고
+🔗 [중간회고](https://velog.io/@_kimsuim/영화-검색-페이지-만들기-개인-과제-중간-회고)
 
+## 🍀 향후 계획
+1. 위에도 언급한 북마크 화면 새로고침이 되지 않는 부분을 수정하고 싶습니다.
+2. 지금은 메인화면에 20개의 데이터만 받아오고 있지만 무힌 스크롤이나 페이지네이션으로 더 많은 데이터를 받아오도록 하고 싶습니다.
+3. 모달창 UI를 더 완성도 있게 수정하고 싶습니다.
+4. 예외처리 시 알럿창을 종종 사용하는 코드를 작성했는데, 알럿창의 디자인도 바꿔보고 싶습니다.
 
-## 🫢 배운 점 & 아쉬운 점
-
-
+## 🍀 느낀점
+자바스크립트 조작에 어려움이 있어 웹 프로젝트 결과물도 동적인 페이지와는 거리가 멀었었는데, 이번 기회로 여러가지 js 함수나 메소드들과 친숙해 질 수 있었습니다. 특히 삼항연산자나 화살표 함수, 그리고 배열 메소드들을 많이 사용해보면서 문법을 익힐 수 있었습니다. 그 밖에도 디렉토리를 구조화 하는 것과 코드 모듈화 같은 처음 접해보는 부분에서도 낯설지만 많이 부딪히면서 발전할 수 있는 좋은 기회였습니다. 이전에 만들었던 결과물들과 차이나게 발전한 모습을 담을 수 있어 좋았습니다.
 
 
 ## 👍🏻 License
