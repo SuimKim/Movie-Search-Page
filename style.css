@@ -1,0 +1,276 @@
+@font-face {
+    font-family: 'FlightSans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('font/FlightSans-Regular.woff') format('woff');
+}
+* {
+    font-family: 'FlightSans';
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+    text-align: center;
+}
+/* ---------------------------- */
+/* 헤더------------------------- */
+header{
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    height: 12.5vw;
+    z-index: 2;
+    border-bottom: 1px solid rgb(255, 171, 207);
+}
+/* ---------------------------- */
+.main-logo {
+    width: 10vw;
+    margin-top: 1vw;
+}
+.search-box {
+    position: relative;
+    margin: 0 auto 0 auto;
+    width: 40%;
+    height: 6vw;
+    background: #FFDEDE;
+    box-shadow: 3px 5px 20px rgba(147, 147, 147, 0.427);
+    border-radius: 20px;
+}
+#input-search{
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    width: 90%;
+    height: 3vw;
+    bottom: 1vw;
+    left: 2vw;
+    border: 1px solid #b1b1b1;
+    font-size: 1vw;
+    padding: 1vw;   
+}
+#input-search:focus{
+    outline: 1px solid black;
+}
+.search-box p {
+    position: relative;
+    font-size: 0.8vw;
+    top: 0.7vw;
+}
+#btn-search{
+    position: absolute;
+    width: 2vw;
+    right: 2.5vw;
+    bottom: 1.5vw;
+}
+#btn-search:hover{
+    cursor: pointer;
+}
+/* ---------------------------- */
+/* 메인------------------------- */
+main{
+    width: 100%;
+}
+/* ---------------------------- */
+.menu{
+    box-sizing: border-box;
+    position: absolute;
+    width: 8vw;
+    height: 10vw;
+    left: 8vw;
+    top: 10vw;
+    background: #FFF3F3;
+    border-radius: 20px;
+}
+.menu img{
+    width: 3vw;
+    position: relative;
+    top: 0.8vw;
+    margin: 0.5vw;
+    left: -1.2vw;
+}
+.menu img:hover{
+    cursor: pointer;
+}
+.menu hr{
+    left: 0.7vw;
+    top: 4.6vw;
+    position: absolute;
+    width: 60%;
+    border: 0.5px solid rgb(155, 155, 155);
+}
+/* ---------------------------- */
+/* 리스트------------------------ */
+.list{
+    position: relative;
+    top: 12.5vw;
+    margin-bottom: 400px;
+}
+.card-list{
+    position: relative;
+    left: 13vw;
+    top: 5vw;
+    width: 75%;
+    background-color: #FFF3F3;
+    border-radius: 20px;
+    min-height: 30vw;
+}
+.loading{
+    margin: 0;
+    position: absolute;
+    font-size: 2vw;
+    top: 13vw;
+    left: 40%;
+}
+.card-list-box{
+    position: relative;
+    box-sizing: border-box;
+    padding: 5vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 20%);
+    justify-content: space-evenly;
+    column-gap: 4vw;
+    row-gap: 4vw;
+    text-align: left;  
+    background-color: #FFF3F3;
+    border-radius: 20px;
+}
+/* ---------------------------- */
+.movie-card{
+    position: relative;
+    background-color: white;
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.movie-card:hover{
+    cursor: pointer;
+}
+/* ---------------------------- */
+.list-img-box{
+    height: 15.4vw;
+    overflow: hidden;
+    background-image: url('/img/대체이미지.png');
+    background-size: cover;
+}
+.list-img-box img{
+    /*height: 270px;*/
+    width: 100%;
+}
+.list-title{
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 1vw;
+}
+.list-contents{
+    font-size: 0.65vw;
+    color: rgb(110, 110, 110);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.side{
+    color:lightgray;
+    font-size: 1.2em;
+    margin: 0 0.4em 0 0.4em;
+}
+/* ---------------------------- */
+.id-box{
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+/* ---------------------------- */
+/* 모달-------------------------- */
+.modal{
+    display: none;
+    position: fixed;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.303);
+    z-index: 3;
+}
+.modal-body{
+    position: relative;
+    top: 130px;
+    width: 800px;
+    height: 72%;
+    background-image: url('/img/모달배경.png');
+    background-size: cover;
+    border-radius: 10px;
+    max-height: calc(100vh - 200px);
+    padding: 20px 20px 20px 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: left;
+}
+/* ---------------------------- */
+.m-info{
+    font-size: 10pt;
+    position: absolute;
+    top: 1px;
+    left: 117px;
+}
+.modal h1{
+    margin: 40px 0 10px 0;
+}
+.modal-contents{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 50%);
+    justify-content: space-evenly;
+    border: 2px solid rgb(193, 193, 193);
+}
+.modal-img-box, .modal-contents-box{
+    box-sizing: border-box;
+    margin: 10px;
+}
+.modal-img-box{
+    overflow: hidden;
+    height: 510px;
+    background-image: url('/img/대체이미지.png');
+    background-size: cover;
+}
+.modal-img-box img{
+    width: 100%;
+    box-sizing: border-box;
+}
+.modal hr{
+    border: 0.5px solid rgb(0, 0, 0);
+}
+.m-data{
+    font-size: 10pt;
+}
+/*-------------------------------------*/
+#btn-close-modal{
+    width: 15px;
+    position: absolute;
+    right:10px;
+    top: 11px;
+}
+#btn-close-modal:hover{
+    cursor: pointer;
+}
+/*-------------------------------------*/
+.btn-add-bookmark, .btn-remove-bookmark{
+    display: none;
+    position: absolute;
+    right: 30px;
+    bottom: 50px;
+    width: 50px;
+    padding: 7px;
+}
+/*-------------------------------------*/
+.btn-add-bookmark:hover,.btn-remove-bookmark:hover{
+    cursor: pointer;
+    border: none;
+    display: none;
+}
+

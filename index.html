@@ -3,43 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Movie Searching!</title>
+    <link rel="stylesheet" href="style.css">
+    <title>LMLM</title>
 </head>
 <body>
     <header>
-        <h1 id="btn-home">MS</h1>
-        영화검색
-        <input type="text" id="search-bar">
-        <button id="btn-search">검색하기</button>
-        <button id="btn-bookmark">북마크함</button>
+        <a href="index.html"><img src="/img/logo_.png" alt="" class="main-logo"></a>
+        <div class="search-box">
+            <p>Love Movies, Let's Movie Search!</p>
+            <input type="text" placeholder="어떤 영화가 궁금해? 💚" id="input-search">
+            <img src="/img/search.png" alt="" id="btn-search">
+        </div>
     </header>
     <main>
-        <section class="cards-list">
-            
+        <section class="list">
+            <div class="menu">
+                <a href="index.html"><img src="/img/home.png" alt="" id="btn-home"></a><br>
+                <hr>
+                <img src="/img/like_.png" alt="" id="btn-bookmark">
+            </div>
+            <div class="card-list"> 
+                <p class="loading">💚 로딩중이야 💚<br>(｡◠‿◠｡)</p>
+                <div class="card-list-box">
+                    
+                </div>
+                
+            </div>
         </section>
         <section class="modal">
-            <div class="modal-body">
-                <!-- <div class="modal-main">
-                    <div class="modal-img-box">
-                        <img src="https://www.themoviedb.org/t/p/w1280/njamYfgktn1Vk3giCRqIO5X2Hmv.jpg" alt="">
-                    </div>
-                    <div class="modal-contents-box">
-                        <h1>6시간 후 너는 죽는다</h1>
-                        <p>2024/10/16 | 스릴러 | 1h 31m</p>
-                        <p>내용</p>
-                    </div>
-                </div>
-                <div class="modal-footer-box">
-                    <button class="btn-add-bookmark">북마크 추가</button>
-                    <button class="btn-close-modal">닫기</button>
-                </div> -->
-            </div>
-            
+            <div class="modal-body"></div>
+            </div>    
         </section>
     </main>
-    <script src="js/api_key.js"></script>
-    <script src="js/api.js"></script>
-</body>
 
+    <script src="/js/apiKey.js"></script>       
+    <script src="/js/name.js"></script>         
+    <script src="/js/fetch.js"></script>         
+    <script src="/js/mainDisplay.js"></script>   
+    <script src="/js/cardsList.js"></script>  
+    <script src="/js/detailVeiw.js"></script>    
+    <script src="/js/bookMark.js"></script>      
+</body>
 </html>
