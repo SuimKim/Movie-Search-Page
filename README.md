@@ -1,6 +1,6 @@
 # Vanilla JS 영화 검색 사이트
 
-🔗 [바로가기 Click !!](https://jocular-longma-fc623f.netlify.app/)
+🔗 [바로가기 Click !!](https://lmlmsuim.netlify.app/)
 
 <br><br>
 
