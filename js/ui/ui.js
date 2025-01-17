@@ -47,7 +47,7 @@ async function displayDetails(data) {
   let listFrame = "";
   let genresArr = [];
 
-  data.genres.forEach((e) => genresArr.push(e.name));
+  data.genres.forEach((e) => genresArr.push(e.name)); // 장르는 n개로 되어있어서 배열로 담아서 뿌려줌
 
   listFrame = `<div class="modal-main">
                     <p class="m-info">영화 상세보기</p>
@@ -93,24 +93,13 @@ function changeBookMarkBtn(id) {
 
   let chanegeBtn = bookMarkArr.filter((a) => a == id); // 해당 영화 id가 로컬스토리지에 있는지 확인, 없다면 changeBtn은 빈 배열(length가 0)
 
-  chanegeBtn.length !== 0
-    ? (bookMarkRemove.style.display = "block")
-    : (bookMarkAdd.style.display = "block");
+  chanegeBtn.length !== 0 ? (bookMarkRemove.style.display = "block") : (bookMarkAdd.style.display = "block");
 }
 // -------------------------------------------------------------------------
 // 북마크 로딩 후 출력
 async function displayList() {
   const movieCard = document.querySelectorAll(".movie-card");
-
-  // console.log(movieCard.length);
-
   movieCard.length === bookMarkArr.length && (cardsList.style.display = "grid");
 }
 // -------------------------------------------------------------------------
-export {
-  displayPosts,
-  displayBookMark,
-  displayDetails,
-  displayList,
-  openModal,
-};
+export { displayPosts, displayBookMark, displayDetails, displayList, openModal };

@@ -37,7 +37,7 @@ header {
   height: 6vw;
   background: #ffdede;
   box-shadow: 3px 5px 20px rgba(147, 147, 147, 0.427);
-  border-radius: 20px;
+  border-radius: 1vw;
 }
 #input-search {
   position: absolute;
@@ -82,7 +82,7 @@ main {
   left: 8vw;
   top: 10vw;
   background: #fff3f3;
-  border-radius: 20px;
+  border-radius: 1vw;
 }
 .menu img {
   width: 3vw;
@@ -114,7 +114,7 @@ main {
   top: 5vw;
   width: 75%;
   background-color: #fff3f3;
-  border-radius: 20px;
+  border-radius: 1vw;
   min-height: 30vw;
 }
 .loading {
@@ -135,7 +135,7 @@ main {
   row-gap: 4vw;
   text-align: left;
   background-color: #fff3f3;
-  border-radius: 20px;
+  border-radius: 1vw;
 }
 /* ---------------------------- */
 .movie-card {

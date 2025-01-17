@@ -1,10 +1,5 @@
 import { options } from "../../key/apiKey.js";
-import {
-  displayBookMark,
-  displayDetails,
-  displayList,
-  displayPosts,
-} from "../ui/ui.js";
+import { displayBookMark, displayDetails, displayList, displayPosts } from "../ui/ui.js";
 // -------------------------------------------------------------------------
 // fetch 함수 - 메인화면(인기순 20개)
 async function fetchDatas(url) {
@@ -13,8 +8,8 @@ async function fetchDatas(url) {
     let data = await res.json();
     await displayPosts(data.results); // 메안에 카드 리스트 뿌리기
   } catch (error) {
-    alert("연결 오류가 발생했습니다. 재접속 해주세요.");
-    console.log(error);
+    alert("연결 오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
+    location.reload();
   }
 }
 // -------------------------------------------------------------------------
@@ -25,7 +20,8 @@ async function fetchId(url) {
     let data = await res.json();
     await displayDetails(data); // 상세 보기(모달에 데이터 넣기)
   } catch (error) {
-    alert("연결 오류가 발생했습니다. 재접속 해주세요.");
+    alert("연결 오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
+    location.reload();
   }
 }
 // -------------------------------------------------------------------------
@@ -37,8 +33,9 @@ async function fetchBookMark(url) {
     await displayBookMark(data); // 북마크함에 카드 리스트 뿌리기
     await displayList();
   } catch (error) {
-    alert("연결 오류가 발생했습니다. 재접속 해주세요.");
+    alert("연결 오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
+    location.reload();
   }
 }
-
+// -------------------------------------------------------------------------
 export { fetchDatas, fetchId, fetchBookMark };
